@@ -1,38 +1,43 @@
-
-
-#main {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
+/* Global */
+#___gatsby {
+  min-height: 100%;
+  position: relative;
 }
 
-.link-white {
-  color: white;
-  text-decoration: none;
+#body {
+  margin: 0 auto;
+  max-width: 960px;
+  padding-bottom: 60px;
+  padding: 10px;
 }
 
 /* Header */
 #header {
-  background: rebeccapurple;
+  background: #c75407;
   margin-bottom: 1.45rem;
 }
 
 .header-content {
+  height: 123px;
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.25rem 1.0875rem;
-  height: 120px;
+  padding: 1.25rem 10px;
 }
 
-.menu {
+.header-title {
+  font-size: 2.25rem;
+  line-height: 0.5;
+}
+
+.header-menu {
+  border-top: 10px bold white;
   margin-top: 5px;
 }
 
 .header-ul {
   list-style-type: none;
-  margin-left: 0rem;
   margin-bottom: 0rem;
+  margin-left: 0rem;
 }
 
 .header-li {
@@ -42,29 +47,55 @@
 
 .header-li:hover > a {
   background-color: white;
-  color: rebeccapurple;
+  color: #c75407;
 }
 
 .header-link {
   display: block;
-  line-height: 42px;
   letter-spacing: 0.3em;
+  line-height: 42px;
   padding: 0 16px;
-  text-decoration: none;
   text-transform: uppercase;
 }
 
+.link-white {
+  color: white;
+  text-decoration: none;
+}
 
+/* Footer */
+#footer {
+  background: #c75407;
+  bottom: 0;
+  color: white;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1rem 10px;
+}
+
+.footer-link {
+  color: white;
+}
 
 
 
 html {
-  font-family: "Raleway", sans-serif, "Helvetica";
+  /* make this work */
+  /* font-family: "Raleway", sans-serif, "Helvetica"; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
 }
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 article,
 aside,
@@ -118,10 +149,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: .67em 0;
-}
 mark {
   background-color: #ff0;
   color: #000;
@@ -157,11 +184,6 @@ samp {
 }
 figure {
   margin: 1em 40px;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
 }
 button,
 input,
@@ -243,8 +265,8 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
+  font: 112.5%/1.45em georgia, serif;
   overflow-y: scroll;
 }
 * {
@@ -257,28 +279,33 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: georgia, serif;
   font-feature-settings: "kern", "liga", "clig", "calt";
+  font-kerning: normal;
+  font-weight: normal;
+  word-wrap: break-word;
 }
 img {
-  max-width: 100%;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  max-width: 100%;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 h1 {
+  color: inherit;
+  font-family: 'ralewaymedium', 'Helvetica', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -286,16 +313,15 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
-  line-height: 1.1;
 }
 h2 {
+  color: inherit;
+  font-family: 'ralewaymedium', 'Helvetica', sans-serif;
+  font-size: 1.62671rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -303,16 +329,15 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
 }
 h3 {
+  color: inherit;
+  font-family: 'ralewaymedium', 'Helvetica', sans-serif;
+  font-size: 1.38316rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -320,16 +345,15 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1;
 }
 h4 {
+  color: inherit;
+  font-family: 'ralewaymedium', 'Helvetica', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -337,16 +361,15 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.1;
 }
 h5 {
+  color: inherit;
+  font-family: 'ralewaymedium', 'Helvetica', sans-serif;
+  font-size: 0.85028rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -354,16 +377,15 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
-  line-height: 1.1;
 }
 h6 {
+  color: inherit;
+  font-family: 'ralewaymedium', 'Helvetica', sans-serif;
+  font-size: 0.78405rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -371,16 +393,10 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
 }
 hgroup {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -388,9 +404,11 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 ul {
+  list-style-image: none;
+  list-style-position: outside;
+  margin-bottom: 1.45rem;
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -398,11 +416,11 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
 }
 ol {
+  list-style-image: none;
+  list-style-position: outside;
+  margin-bottom: 1.45rem;
   margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
@@ -410,11 +428,9 @@ ol {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
 }
 dl {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -422,9 +438,9 @@ dl {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 dd {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -432,9 +448,9 @@ dd {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 p {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -442,9 +458,9 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 figure {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -452,26 +468,29 @@ figure {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
+  font-size: 0.85rem;
+  line-height: 1.42;
+  margin-bottom: 1.45rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
   overflow: auto;
-  word-wrap: normal;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
   padding: 1.45rem;
+  word-wrap: normal;
 }
 table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -479,13 +498,10 @@ table {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
-  border-collapse: collapse;
   width: 100%;
 }
 fieldset {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -493,9 +509,9 @@ fieldset {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 blockquote {
+  margin-bottom: 1.45rem;
   margin-left: 1.45rem;
   margin-right: 1.45rem;
   margin-top: 0;
@@ -503,9 +519,9 @@ blockquote {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 form {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -513,9 +529,9 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 noscript {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -523,9 +539,9 @@ noscript {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 iframe {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -533,22 +549,24 @@ iframe {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 hr {
+  background: white;
+  border: none;
+  box-sizing: content-box;
+  height: 2px;
+  margin-bottom: 0px;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  overflow: visible;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
 }
 address {
+  margin-bottom: 1.45rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -556,7 +574,6 @@ address {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 b {
   font-weight: bold;
@@ -580,13 +597,13 @@ ul li {
   padding-left: 0;
 }
 li > ol {
-  margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
+  margin-left: 1.45rem;
   margin-top: calc(1.45rem / 2);
 }
 li > ul {
-  margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
+  margin-left: 1.45rem;
   margin-top: calc(1.45rem / 2);
 }
 blockquote *:last-child {
@@ -631,16 +648,16 @@ thead {
 }
 td,
 th {
-  text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
   -webkit-font-feature-settings: "tnum";
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  font-feature-settings: "tnum";
+  padding-bottom: calc(0.725rem - 1px);
   padding-left: 0.96667rem;
   padding-right: 0.96667rem;
   padding-top: 0.725rem;
-  padding-bottom: calc(0.725rem - 1px);
+  text-align: left;
 }
 th:first-child,
 td:first-child {
@@ -656,9 +673,9 @@ code {
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
   padding-bottom: 0.2em;
+  padding-top: 0.2em;
+  padding: 0;
 }
 pre code {
   background: none;
@@ -679,6 +696,7 @@ pre tt:after {
 }
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 100%;
+    /* font-size: 100%; */
   }
 }
+/* TODO more responsive layouts */

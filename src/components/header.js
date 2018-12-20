@@ -3,20 +3,19 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = ({ siteTitle }) => (
-  <div id="header">
-    <div className="header-content">
-      <h1 style={{ margin: 0 }}>
-        <Link to="/" className="link-white">
-          {siteTitle}
-        </Link>
+  <div id='header'>
+    <div className='header-content'>
+      <h1 className='header-title'>
+        <Link to='/' className='link-white'>{siteTitle}</Link>
       </h1>
-      <div className="menu">
-        <ul className="header-ul">
-          <li className="header-li">
-          <Link className="header-link link-white" to="/">Home</Link>
+      <hr/>
+      <div className='header-menu'>
+        <ul className='header-ul'>
+          <li className='header-li'>
+          <Link className='header-link link-white' to='/'>Home</Link>
           </li>
-          <li className="header-li">
-          <Link className="header-link link-white" to="/contact">Contact</Link>
+          <li className='header-li'>
+          <Link className='header-link link-white' to='/contact'>Contact</Link>
           </li>
         </ul>
       </div>
