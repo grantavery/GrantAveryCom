@@ -8,6 +8,7 @@ const ContactPage = () => (
     <SEO title="Contact" />
     <h1>Contact</h1>
     <p>This is supposed to be a contact form</p>
+    {/* TODO */}
   </Layout>
 )
 
