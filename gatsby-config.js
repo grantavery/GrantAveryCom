@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Grant Avery',
-    description: '',
-    author: '',
+    description: 'Grant Avery\'s personal website',
+    author: 'Grant Avery',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

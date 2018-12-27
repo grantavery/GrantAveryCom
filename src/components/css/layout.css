@@ -7,14 +7,16 @@
 #body {
   margin: 0 auto;
   max-width: 960px;
-  padding: 10px;
-  padding-bottom: 60px;
+  padding: 50px 10px 110px;
+}
+
+.page-btn {
+  font-size: 0.8em;
 }
 
 /* Header */
 #header {
   background: #c75407;
-  margin-bottom: 1.45rem;
 }
 
 .header-content {
@@ -50,14 +52,6 @@
   color: #c75407;
 }
 
-.header-link {
-  display: block;
-  letter-spacing: 0.3em;
-  line-height: 42px;
-  padding: 0 16px;
-  text-transform: uppercase;
-}
-
 .link-white {
   color: white;
   text-decoration: none;
@@ -84,7 +78,18 @@
   color: white;
 }
 
+/* Contact page */
 
+.contact-form .field {
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+.contact-form #message {
+  width: 100%;
+}
+
+/* Everything else */
 
 html {
   /* make this work */
@@ -198,13 +203,33 @@ optgroup {
   font-weight: 700;
 }
 button,
+.btn {
+  background-color: #c75407;
+  border: 0;
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+  line-height: 42px;
+  overflow: visible;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+button:hover,
+button:active,
+.btn:hover,
+.btn:active {
+  background-color: #e2620c;
+  color: #fff;
+}
+button,
 input {
   overflow: visible;
 }
-button,
+/* button,
 select {
   text-transform: none;
-}
+} */
 [type=reset],
 [type=submit],
 button,
@@ -522,7 +547,7 @@ blockquote {
   padding-top: 0;
 }
 form {
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;

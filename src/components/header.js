@@ -12,10 +12,10 @@ const Header = ({ siteTitle }) => (
       <div className='header-menu'>
         <ul className='header-ul'>
           <li className='header-li'>
-          <Link className='header-link link-white' to='/'>Home</Link>
+          <Link className='header-btn btn link-white' to='/'>Home</Link>
           </li>
           <li className='header-li'>
-          <Link className='header-link link-white' to='/contact'>Contact</Link>
+          <Link className='header-btn btn link-white' to='/contact'>Contact</Link>
           </li>
         </ul>
       </div>
