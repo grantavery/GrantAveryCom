@@ -8,7 +8,7 @@ const ContactPage = () => (
     <SEO title="Contact" />
     <h1>Contact</h1>
 
-    <form className="contact-form" name="contact" method="post" data-netlify="true" 
+    <form className="contact-form" name="GrantAveryCom contact form" method="post" data-netlify="true" 
       data-netlify-honeypot="bot-field">
         <input type="hidden" name="bot-field" />
         <div className="field half first">
