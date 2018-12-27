@@ -27,22 +27,6 @@ const ContactPage = () => (
             <button type="submit" value="Send" className="page-btn">Send</button>
         </div>
     </form>
-
-    {/* <form action="/submit.php" method="post">
-
-      <p>Your name: <input type="text" name="name" /></p>
-
-      <p>Your email: <input type="text" name="email" /></p>
-
-      <p class="antispam">Leave this empty: <input type="text" name="url" /></p>
-
-      <p><textarea name="message"></textarea></p>
-
-      <p><input type="submit" value="Send" /></p>
-
-    </form> */}
-
-    {/* TODO */}
   </Layout>
 )
 

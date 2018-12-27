@@ -87,6 +87,11 @@
 
 .contact-form #message {
   width: 100%;
+  font-size: 15px;
+}
+
+.contact-form input {
+  font-size: 15px;
 }
 
 /* Everything else */
