@@ -23,6 +23,7 @@ const ContactPage = () => (
             <label htmlFor="message">Message:</label><br/>
             <textarea name="message" id="message" rows="6"></textarea>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <div className="actions">
             <button type="submit" value="Send" className="page-btn">Send</button>
         </div>
