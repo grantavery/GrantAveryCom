@@ -8,8 +8,8 @@ const ContactPage = () => (
     <SEO title="Contact" />
     <h1>Contact</h1>
 
-    <form className="contact-form" name="GrantAveryCom contact form" method="post" data-netlify="true" 
-      data-netlify-honeypot="bot-field">
+    <form className="contact-form" name="GrantAveryCom contact form" method="post"
+      data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="bot-field" />
         <div className="field half first">
             <label htmlFor="name">Name:</label><br/>
@@ -23,7 +23,7 @@ const ContactPage = () => (
             <label htmlFor="message">Message:</label><br/>
             <textarea name="message" id="message" rows="6"></textarea>
         </div>
-        <div data-netlify-recaptcha="true" netlify-recaptcha></div>
+        <div data-netlify-recaptcha="true" netlify-recaptcha data-netlify-recaptcha></div>
         <div className="actions">
             <button type="submit" value="Send" className="page-btn">Send</button>
         </div>
