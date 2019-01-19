@@ -22,22 +22,22 @@ const ContactPage = () => (
       <div hidden>
         <label>
           Don’t fill this out:{" "}
-          <input name="bot-field" onChange={this.handleChange} />
+          <input name="bot-field"/>
         </label>
       </div>
       <div className="field half first">
         <label htmlFor="name">Name:<br />
-          <input type="text" name="name" id="name" onChange={this.handleChange} />
+          <input type="text" name="name" id="name"/>
         </label>
       </div>
       <div className="field half">
         <label htmlFor="email">Email:<br />
-          <input type="text" name="email" id="email" onChange={this.handleChange} />
+          <input type="text" name="email" id="email"/>
         </label>
       </div>
       <div className="field" id="contact-recaptcha">
         <label htmlFor="message">Message:<br />
-          <textarea name="message" id="message" rows="6" onChange={this.handleChange} />
+          <textarea name="message" id="message" rows="6"/>
         </label>
       </div>
       <div className="actions">
