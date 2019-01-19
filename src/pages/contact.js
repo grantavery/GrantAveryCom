@@ -5,30 +5,47 @@ import SEO from '../components/seo'
 
 const ContactPage = () => (
   <Layout>
+  <div>
     <SEO title="Contact" />
     <h1>Contact</h1>
-
-    <form className="contact-form" name="GrantAveryCom contact form" method="post"
-      data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="bot-field" />
-        <div className="field half first">
-            <label htmlFor="name">Name:</label><br/>
-            <input type="text" name="name" id="name" />
-        </div>
-        <div className="field half">
-            <label htmlFor="email">Email:</label><br/>
-            <input type="text" name="email" id="email" />
-        </div>
-        <div className="field">
-            <label htmlFor="message">Message:</label><br/>
-            <textarea name="message" id="message" rows="6"></textarea>
-        </div>
-        <div data-netlify-recaptcha="true" netlify-recaptcha data-netlify-recaptcha></div>
-        <div className="actions">
-            <button type="submit" value="Send" className="page-btn">Send</button>
-        </div>
+    <form
+      className="contact-form"
+      name="GrantAveryCom contact form"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="https://formspree.io/grant.m.avery+contact@gmail.com"
+    >
+      <noscript>
+        <p>This form won’t work with Javascript disabled</p>
+      </noscript>
+      <div hidden>
+        <label>
+          Don’t fill this out:{" "}
+          <input name="bot-field" onChange={this.handleChange} />
+        </label>
+      </div>
+      <div className="field half first">
+        <label htmlFor="name">Name:<br />
+          <input type="text" name="name" id="name" onChange={this.handleChange} />
+        </label>
+      </div>
+      <div className="field half">
+        <label htmlFor="email">Email:<br />
+          <input type="text" name="email" id="email" onChange={this.handleChange} />
+        </label>
+      </div>
+      <div className="field" id="contact-recaptcha">
+        <label htmlFor="message">Message:<br />
+          <textarea name="message" id="message" rows="6" onChange={this.handleChange} />
+        </label>
+      </div>
+      <div className="actions">
+        <button type="submit" value="Send" className="page-btn">Send</button>
+      </div>
     </form>
-  </Layout>
+  </div>
+</Layout>
 )
 
 export default ContactPage
