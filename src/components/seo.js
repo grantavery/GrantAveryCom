@@ -19,6 +19,10 @@ function SEO({ description, lang, meta, keywords, title }) {
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
+                name: 'disclaimer',
+                content: 'Site icon from the great xkcd webcomic (https://xkcd.com/)',
+              },
+              {
                 name: 'description',
                 content: metaDescription,
               },
