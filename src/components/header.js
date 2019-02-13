@@ -15,6 +15,9 @@ const Header = ({ siteTitle }) => (
           <Link className='header-btn btn link-white' to='/'>Home</Link>
           </li>
           <li className='header-li'>
+          <Link className='header-btn btn link-white' to='/links'>Links</Link>
+          </li>
+          <li className='header-li'>
           <Link className='header-btn btn link-white' to='/contact'>Contact</Link>
           </li>
         </ul>

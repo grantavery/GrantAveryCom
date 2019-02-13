@@ -25,6 +25,18 @@
 
 /* Everything else */
 
+img.emoji{
+  display: inline;
+  border: none;
+  box-shadow: none;
+  height: 1em;
+  width: 1em;
+  margin: 0 .07em;
+  vertical-align: -.1em;
+  background: 0 0;
+  padding: 0;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
