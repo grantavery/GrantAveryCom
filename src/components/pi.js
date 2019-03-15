@@ -57,7 +57,7 @@ class PiComponent extends React.Component {
   }
 
   fetchPiDigits = (start, numberOfDigits) => {
-    return axios.get('http://api.pi.delivery/v1/pi', {
+    return axios.get('https://api.pi.delivery/v1/pi', {
       params: {
         start: start,
         numberOfDigits: numberOfDigits
