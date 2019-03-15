@@ -19,7 +19,7 @@ const IndexPage = () => (
         I am already versed in C#/.NET and Java programming, 
         as well as basic front-end HTML and CSS. 
         I've also been broadening my competence in Javascript 
-        (mostly AngularJS along with some Node.js and Typescript) 
+        (mostly AngularJS along with some jQuery, vanilla, and ReactJS) 
         and front-end add-ons like Sass styling. 
         In addition to web development, I have experience programming 
         iOS and Android mobile apps.
