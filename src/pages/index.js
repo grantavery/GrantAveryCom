@@ -17,10 +17,10 @@ const IndexPage = () => (
         which include computer programming, web design, literature, 
         photography, technology, and much more. 
         I am already versed in C#/.NET and Java programming, 
-        as well as basic front-end HTML and CSS. 
+        as well as front-end HTML and CSS. 
         I've also been broadening my competence in Javascript 
-        (mostly AngularJS along with some jQuery, vanilla, and ReactJS) 
-        and front-end add-ons like Sass styling. 
+        (mostly Angular along with some jQuery, React, and vanilla) 
+        and front-end enhancements like Sass styling. 
         In addition to web development, I have experience programming 
         iOS and Android mobile apps.
       </p>
