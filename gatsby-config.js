@@ -3,6 +3,20 @@ module.exports = {
     title: 'Grant Avery',
     description: 'Grant Avery\'s personal website',
     author: 'Grant Avery',
+    menuLinks: [
+      {
+        name: 'Home',
+        link: '/'
+      },
+      {
+        name: 'Links',
+        link: '/links'
+      },
+      {
+        name: 'Contact',
+        link: '/contact'
+      },
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',
