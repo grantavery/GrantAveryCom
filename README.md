@@ -34,14 +34,6 @@ Available at: `http://localhost:8000`!
 
 *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
 
-### Update styles
-This compiles the SASS to CSS. Don't try to make changes directly to the CSS.
-
-```sh
-sass --watch src/components/scss/base:src/components/css
-```
-
-
 ### Create a production build
 
 ```sh
