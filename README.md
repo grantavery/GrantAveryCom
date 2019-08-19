@@ -2,7 +2,7 @@
   GrantAvery.com
 </h1>
 
-You can view this site at [grantavery.com](https://www.grantavery.com/). It uses [GatsbyJS](https://www.gatsbyjs.org/) to bundle the pages and content, and then on push to Master, [netlify](https://www.netlify.com/) publishes it to update the live site.
+You can view this site at [grantavery.com](https://www.grantavery.com/). It uses [GatsbyJS](https://www.gatsbyjs.org/) to bundle the pages and content, and then on push to GitHub, [netlify](https://www.netlify.com/) publishes it to update the live site.
 
 
 ## Local Dev:

@@ -22,7 +22,7 @@ const IndexPage = () => (
         (mostly Angular along with some jQuery, React, and vanilla) 
         and front-end enhancements like Sass styling. 
         In addition to web development, I have experience programming 
-        iOS and Android mobile apps.
+        iOS and Android mobile apps with Swift and Java, respectively.
       </p>
     </div>
   </Layout>
