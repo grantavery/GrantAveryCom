@@ -13,12 +13,6 @@ const LinksPage = () => (
       <p><a href='https://github.com/GrantAvery/GrantAvery'>GitHub</a></p>
 
       <p><a href='https://www.linkedin.com/in/grant-m-avery/'>LinkedIn</a></p>
-
-      <p>
-        (It looks like these sites are all strong proponents of PascalCase&nbsp;
-        <span role="img" aria-label="smiley face">😃</span>
-        )
-      </p>
     </div>
   </Layout>
 )
