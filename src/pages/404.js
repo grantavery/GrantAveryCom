@@ -1,8 +1,7 @@
-import React from 'react'
-
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import timeywimey from '../images/wibbly-wobbly-timey-wimey-stuff.jpg'
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import timeywimey from '../images/wibbly-wobbly-timey-wimey-stuff.jpg';
 
 const NotFoundPage = () => (
   <Layout>

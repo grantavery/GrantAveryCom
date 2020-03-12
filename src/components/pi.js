@@ -1,5 +1,5 @@
-import React from 'react'
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
 
 class PiComponent extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class PiComponent extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ isLoaded: false})
+    this.setState({ isLoaded: false});
 
     let a = this.fetchPiDigits(0,1000);
     let b = this.fetchPiDigits(1000,1000);
@@ -32,13 +32,13 @@ class PiComponent extends React.Component {
       this.setState({
         isLoaded: true,
         content: fullString
-      })
+      });
     })
     .catch((error) => {
       this.setState({
         isLoaded: true,
         content: error
-      })
+      });
     });
   }
 

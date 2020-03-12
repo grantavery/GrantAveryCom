@@ -1,8 +1,7 @@
-import React from 'react'
-
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import PiComponent from '../components/pi'
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import PiComponent from '../components/pi';
 
 const PiPage = () => (
   <Layout>
