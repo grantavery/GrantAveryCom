@@ -7,21 +7,22 @@ const IndexPage = () => (
     <SEO title='Home' />
     <h1>Home</h1>
     <div>
-      <p>Hi, I’m a software developer currently attending Davenport University. 
+      <p>
+        {/* Hi, I’m a software developer currently attending Davenport University. 
         I build websites and mobile apps for Spectrum Health and others, 
-        and am always learning new things.
+        and am always learning new things. */}
+        Hi, I'm a software developer specializing in C#, Angular, and Swift. 
+        In a sentence, I build websites and mobile apps, and am always learning new things.
       </p>
 
-      <p>I am passionate about developing my interests, 
-        which include computer programming, web design, literature, 
-        photography, technology, and much more. 
-        I am already versed in C#/.NET and Java programming, 
-        as well as front-end HTML and CSS. 
-        I've also been broadening my competence in Javascript 
-        (mostly Angular along with some jQuery, React, and vanilla) 
-        and front-end enhancements like Sass styling. 
-        In addition to web development, I have experience programming 
-        iOS and Android mobile apps with Swift and Java, respectively.
+      <p>
+      I am passionate about developing my interests, which include computer programming, 
+      web design, literature, photography, technology, and much more. 
+      I graduated recently from Davenport University with a B.S. in Computer Information Systems, 
+      which provided me with a solid understanding of OOP languages like C# and Java, 
+      front-end development, and SQL databases. In my work at Spectrum Health as a software development intern 
+      and later trainee, I expanded my skillset to include Javascript frameworks like React and jQuery, 
+      back-end technologies like .NET Core, as well as Swift and Java for native mobile app development. 
       </p>
     </div>
   </Layout>

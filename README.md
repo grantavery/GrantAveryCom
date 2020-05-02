@@ -2,6 +2,8 @@
   GrantAvery.com
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12aa2b03-e92c-4c42-a5fd-038f8d1dae58/deploy-status)](https://app.netlify.com/sites/grantaverycom/deploys)
+
 You can view this site at [grantavery.com](https://www.grantavery.com/). It uses [GatsbyJS](https://www.gatsbyjs.org/) to bundle the pages and content, and then on push to GitHub, [netlify](https://www.netlify.com/) publishes it to update the live site.
 
 
@@ -45,11 +47,6 @@ gatsby build
 ```sh
 gatsby serve
 ```
-
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/GrantAvery/GrantAveryCom)
 
 
 ## Gatsby Info (taken from their starter project README):
