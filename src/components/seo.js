@@ -19,6 +19,11 @@ function SEO({ description, lang, meta, keywords, title }) {
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
+                name: 'hey there',
+                content: 'Hey you, yeah you! I appreciate that you\'re interested enough in my site that you\'re digging around the HTML. ' + 
+                  'This little thing was made with React using GatsbyJS and netlify, and yes I know about the issue with the navigation bar on mobile.'
+              },
+              {
                 name: 'disclaimer',
                 content: 'Site icon from the great xkcd webcomic (https://xkcd.com/)',
               },
