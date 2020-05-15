@@ -19,7 +19,7 @@ class PiComponent extends React.Component {
     let c = this.fetchPiDigits(2000,1000);
     let d = this.fetchPiDigits(3000,142);
 
-    let fullString = "";
+    let fullString = '';
 
     Promise.all([a,b,c,d]).then((resolved) => {
       console.log(resolved);

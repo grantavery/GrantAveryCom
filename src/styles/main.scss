@@ -1,29 +1,6 @@
 @import './fonts';
 @import './layout';
-
-/* Contact page */
-
-.contact-form .field {
-  margin-bottom: 10px;
-  max-width: 500px;
-}
-
-.contact-form #message {
-  width: 100%;
-  font-size: 15px;
-}
-
-.contact-form input {
-  font-size: 15px;
-}
-
-/* 404 page */
-
-.image-404 {
-  width: 200px;
-}
-
-/* Everything else */
+@import './pages';
 
 img.emoji{
   display: inline;
@@ -249,12 +226,12 @@ html {
   box-sizing: inherit;
 }
 body {
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-kerning: normal;
   font-weight: normal;
   word-wrap: break-word;
@@ -618,11 +595,11 @@ thead {
 }
 td,
 th {
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
+  font-feature-settings: 'tnum';
   padding-bottom: calc(0.725rem - 1px);
   padding-left: 0.96667rem;
   padding-right: 0.96667rem;
@@ -641,8 +618,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+    'Liberation Mono', Menlo, Courier, monospace;
   padding-bottom: 0.2em;
   padding-top: 0.2em;
   padding: 0;
@@ -656,13 +633,13 @@ code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
-  content: " ";
+  content: ' ';
 }
 pre code:before,
 pre code:after,
 pre tt:before,
 pre tt:after {
-  content: "";
+  content: '';
 }
 @media only screen and (max-width: 480px) {
   html {

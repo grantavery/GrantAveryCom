@@ -8,9 +8,6 @@ const IndexPage = () => (
     <h1>Home</h1>
     <div>
       <p>
-        {/* Hi, I’m a software developer currently attending Davenport University. 
-        I build websites and mobile apps for Spectrum Health and others, 
-        and am always learning new things. */}
         Hi, I'm a software developer specializing in C#, Angular, and Swift. 
         In a sentence, I build websites and mobile apps, and am always learning new things.
       </p>
