@@ -21,21 +21,20 @@ export default class ContactPage extends React.Component {
   };
   handleRecaptcha = value => {
     this.setState({ "g-recaptcha-response": value });
-    console.log(value);
-    this.state.gotRecaptcha = true;
+    this.setState({ gotRecaptcha: true });
   };
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
 
-    if (this.state.name == "" || this.state.email == "" || this.state.message == "")
+    if (this.state.name === "" || this.state.email === "" || this.state.message === "")
     {
       alert("Error: Please make sure every field is filled out.");
     }
     else if (!this.validateEmail(this.state.email)) {
       alert("Error: Please make sure the provided email is in the correct format.");
     }
-    else if (this.state.gotRecaptcha == false) {
+    else if (this.state.gotRecaptcha === false) {
       alert("Error: Please make sure you've clicked the reCAPTCHA checkbox.");
     }
     else {
@@ -51,9 +50,9 @@ export default class ContactPage extends React.Component {
         .catch(error => alert("Error: Please make sure every field is filled out. " + error));
     }
   };
-  validateEmail = function (value) {
-    // Regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  validateEmail = value => {
+    // Regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript, and removed 4 extra escape characters (\)
+    var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(value);
   };
   render() {
