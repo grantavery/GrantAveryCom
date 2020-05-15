@@ -17,7 +17,7 @@ const IndexPage = () => (
       web design, literature, photography, technology, and much more. 
       I graduated recently from Davenport University with a B.S. in Computer Information Systems, 
       which provided me with a solid understanding of OOP languages like C# and Java, 
-      front-end development, and SQL databases. In my work at Spectrum Health as a software development intern 
+      front-end development (.NET MVC, Angular), and SQL databases. In my work at Spectrum Health as a software development intern 
       and later trainee, I expanded my skillset to include Javascript frameworks like React and jQuery, 
       back-end technologies like .NET Core, as well as Swift and Java for native mobile app development. 
       </p>
