@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 
 const LinksPage = () => (
   <Layout>
-    <SEO title="Links" />
+    <SEO title='Links' />
     <h1>Links</h1>
     <div>
       <p>Feel free to check out the links below for other places you can find me:</p>

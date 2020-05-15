@@ -13,7 +13,7 @@
   max-width: 960px;
   padding: 50px 10px 110px;
 
-  @include media(">tablet") {
+  @include media('>tablet') {
     font: 115%/1.60em georgia, serif;
   }
 }
