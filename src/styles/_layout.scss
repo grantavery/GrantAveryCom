@@ -25,34 +25,37 @@
 /* Header */
 
 #header {
-  background: #c75407;
+  background: $orange-primary;
+  height: 115px;
 
   .header-content {
-    height: 115px;
     margin: 0 auto;
     max-width: 960px;
-		padding: 1.25rem 10px 0rem;
-		
-		.navbar {
-			padding: 0;
-			margin-bottom: 15px;
-		}
-		
-		.navbar-toggler {
-			background-color: #fff;
-		}
+
+    .navbar {
+      padding: 0;
+      margin-bottom: 15px;
+    }
+    
+    .navbar-toggler {
+      background-color: $white;
+      margin: 15px 15px 0;
+    }
 
     .header-title {
       font-size: 2.25rem;
-			line-height: 0.5;
-			margin-right: 15px;
-			font-weight: bold;
-			margin-top: 10px;
+      line-height: 0.5;
+      font-weight: bold;
+      margin-top: 10px;
+      padding: 1.25rem 10px 0rem;
     }
     
     .header-menu {
-      border-top: 10px bold white;
+      border-top: 10px bold $white;
       margin-top: 5px;
+      @include media('>tablet') {
+        padding: 1.25rem 10px 0rem;
+      }
 
       .header-ul {
         list-style-type: none;
@@ -62,37 +65,38 @@
       
       .header-li {
         float: left;
-				position: relative;
+        position: relative;
 
-				@include media('<tablet') {
-					margin-bottom: 0;
-				}
+        @include media('<tablet') {
+          margin-bottom: 0;
+        }
       }
       
       .header-li:hover > a {
-        background-color: white;
-        color: #c75407;
+        @include media('>tablet') {
+          background-color: $white;
+          color: $orange-primary;
+        }
       }
     }
 
     .link-white {
-      color: white;
+      color: $white;
       text-decoration: none;
     }
-	}
-	
-	.headerBottom {
-		background-color: #c75407;
-		height: 23px;
-	}
+  }
+
+  .header-white-line {
+    margin: 0 10px;
+  }
 }
 
 /* Footer */
 
 #footer {
-  background: #c75407;
+  background: $orange-primary;
   bottom: 0;
-  color: white;
+  color: $white;
   font-family: 'ralewaymedium', 'Helvetica', sans-serif;
   font-size: 16px;
   height: 62px;
@@ -106,6 +110,6 @@
   }
   
   .footer-link {
-    color: white;
+    color: $white;
   }
 }
