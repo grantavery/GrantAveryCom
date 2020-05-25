@@ -1,24 +1,29 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 const Header = ({ siteTitle, menuLinks }) => (
   <div id='header'>
     <div className='header-content'>
-      <h1 className='header-title'>
-        <Link to='/' className='link-white'>{siteTitle}</Link>
-      </h1>
-      <hr/>
-      <nav className='header-menu' style={{display:'flex', flex:1 }}>
-        <ul className='header-ul'>
-        {
+      <Navbar expand='md' >
+        <h1 className='header-title'>
+          <Link to='/' className='link-white'>{siteTitle}</Link>
+        </h1>
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav className='mr-auto header-menu'>
+          {
           menuLinks.map(link =>
             <li className='header-li' key={link.name}>
               <Link className='header-btn btn link-white' to={link.link}>{link.name}</Link>
             </li>)
-        }
-        </ul>
-      </nav>
+          }
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <hr className='header-white-line'/>
     </div>
   </div>
 )
