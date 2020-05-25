@@ -71,13 +71,6 @@
           margin-bottom: 0;
         }
       }
-      
-      .header-li:hover > a {
-        @include media('>tablet') {
-          background-color: $white;
-          color: $orange-primary;
-        }
-      }
     }
 
     .link-white {
