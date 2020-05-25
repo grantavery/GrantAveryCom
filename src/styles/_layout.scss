@@ -28,14 +28,26 @@
   background: #c75407;
 
   .header-content {
-    height: 123px;
+    height: 115px;
     margin: 0 auto;
     max-width: 960px;
-    padding: 1.25rem 10px;
+		padding: 1.25rem 10px 0rem;
+		
+		.navbar {
+			padding: 0;
+			margin-bottom: 15px;
+		}
+		
+		.navbar-toggler {
+			background-color: #fff;
+		}
 
     .header-title {
       font-size: 2.25rem;
-      line-height: 0.5;
+			line-height: 0.5;
+			margin-right: 15px;
+			font-weight: bold;
+			margin-top: 10px;
     }
     
     .header-menu {
@@ -50,7 +62,11 @@
       
       .header-li {
         float: left;
-        position: relative;
+				position: relative;
+
+				@include media('<tablet') {
+					margin-bottom: 0;
+				}
       }
       
       .header-li:hover > a {
@@ -63,7 +79,12 @@
       color: white;
       text-decoration: none;
     }
-  }
+	}
+	
+	.headerBottom {
+		background-color: #c75407;
+		height: 23px;
+	}
 }
 
 /* Footer */

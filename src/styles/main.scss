@@ -126,7 +126,8 @@ optgroup {
 button,
 .btn {
   background-color: #c75407;
-  border: 0;
+	border: 0;
+	border-radius: 0;
   color: #fff;
   display: block;
   font-size: 1em;
@@ -134,7 +135,7 @@ button,
   line-height: 42px;
   overflow: visible;
   padding: 0 16px;
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 button:hover,
 button:active,
@@ -252,7 +253,7 @@ h1 {
   font-family: 'ralewaymedium', 'Helvetica', sans-serif;
   font-size: 1.8rem;
   line-height: 1.1;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -535,7 +536,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  //margin-bottom: calc(1.45rem / 2);
 }
 ol li {
   padding-left: 0;
