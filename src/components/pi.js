@@ -14,30 +14,23 @@ class PiComponent extends React.Component {
   componentDidMount() {
     this.setState({ isLoaded: false});
 
-    let a = this.fetchPiDigits(0,1000);
-    let b = this.fetchPiDigits(1000,1000);
-    let c = this.fetchPiDigits(2000,1000);
-    let d = this.fetchPiDigits(3000,142);
-
-    let fullString = '';
-
-    Promise.all([a,b,c,d]).then((resolved) => {
-      console.log(resolved);
-
-      for (var i = 0;i < resolved.length; i++)
-      {
-        fullString += resolved[i].data.content;
+    axios.get("https://pi-api-app-grantavery.herokuapp.com/pi", {
+      params: {
+        numberOfDigits: 3142
       }
-
+    })
+    .then(response => {
+      console.log("Response: " + JSON.stringify(response.data))
       this.setState({
         isLoaded: true,
-        content: fullString
+        content: response.data
       });
     })
-    .catch((error) => {
+    .catch(err => {
+      console.log("Error: " + JSON.stringify(err))
       this.setState({
         isLoaded: true,
-        content: error
+        error: err
       });
     });
   }
@@ -54,15 +47,6 @@ class PiComponent extends React.Component {
         <p>{content}</p>
       )
     }
-  }
-
-  fetchPiDigits = (start, numberOfDigits) => {
-    return axios.get('https://api.pi.delivery/v1/pi', {
-      params: {
-        start: start,
-        numberOfDigits: numberOfDigits
-      }
-    })
   }
 }
 
