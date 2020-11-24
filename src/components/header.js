@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 const Header = ({ siteTitle, menuLinks }) => (
-  <div id='header'>
+  <div id='header' role='banner'>
     <div className='header-content'>
       <Navbar expand='md' >
         <h1 className='header-title'>
