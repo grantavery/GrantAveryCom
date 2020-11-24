@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
       <>
           <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
 
-          <div id='body'>
+          <div id='body' role='main'>
             {children}
           </div>
           <Footer />

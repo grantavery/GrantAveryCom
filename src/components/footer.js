@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const Footer = () => (
-  <div id='footer'>
+  <div id='footer' role='contentinfo'>
     <div className='footer-content'>
         <Link className='footer-link' title='Grant Avery' rel='home'
           to='/'>

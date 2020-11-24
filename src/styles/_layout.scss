@@ -22,6 +22,33 @@
   font-size: 0.8em;
 }
 
+.links-container {
+  display: flex;
+
+  .link-box {
+    color: black;
+    max-width: 400px;
+    padding: 10px;
+    text-decoration: none;
+
+    img {
+      width: 35px;
+      margin-bottom: 0;
+      margin-right: 0.5rem;
+    }
+  
+    &:visited {
+      color: black;
+    }
+  
+    &:hover, &:active {
+      background-color: $light-grey;
+      box-shadow: 3px 6px rgba(199, 84, 7, 0.5);
+      text-decoration: none;
+    }
+  }
+}
+
 /* Header */
 
 #header {
