@@ -1,5 +1,5 @@
 {
-  "name": "grantaverycom",
+  "name": "grant-avery-com",
   "description": "Gatsby default starter",
   "version": "1.0.0",
   "author": "Grant Avery",
@@ -40,6 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GrantAvery/GrantAveryCom"
+    "url": "https://github.com/GrantAvery/grant-avery-com"
   }
 }
