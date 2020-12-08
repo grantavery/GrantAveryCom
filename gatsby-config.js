@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'grantaverycom',
+        name: 'grant-avery-com',
         short_name: 'starter',
         start_url: '/',
         background_color: '#663399',

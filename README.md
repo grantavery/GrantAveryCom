@@ -2,7 +2,7 @@
   GrantAvery.com
 </h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/12aa2b03-e92c-4c42-a5fd-038f8d1dae58/deploy-status)](https://app.netlify.com/sites/grantaverycom/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12aa2b03-e92c-4c42-a5fd-038f8d1dae58/deploy-status)](https://app.netlify.com/sites/grant-avery-com/deploys)
 
 You can view this site at [grantavery.com](https://www.grantavery.com/). It uses [GatsbyJS](https://www.gatsbyjs.org/) (which is built on top of React) to bundle the pages and content, and then on push to GitHub, [netlify](https://www.netlify.com/) publishes it to update the live site.
 
@@ -17,7 +17,7 @@ npm install -g gatsby-cli
 ### Change directories into site folder
 
 ```sh
-cd grantaverycom/
+cd grant-avery-com/
 ```
 
 ### Install dependencies
@@ -53,7 +53,7 @@ gatsby serve
 ### Create a new site
 
 ```sh
-gatsby new grantaverycom
+gatsby new grant-avery-com
 ```
 
 ### Different files
