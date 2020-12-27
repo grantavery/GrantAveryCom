@@ -48,6 +48,12 @@ gatsby build
 gatsby serve
 ```
 
+## Pi Page
+
+Accessible at {baseUrl}/pi
+
+Uses [my Pi API repo](https://github.com/grantavery/pi-api) (deployed to https://pi-api-bfii5.ondigitalocean.app) as a NodeJS Express API to retrieve Pi values from Google's more cumbersome [Pi API](https://pi.delivery/).
+
 ## Gatsby Info (taken from their starter project README)
 
 ### Create a new site
