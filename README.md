@@ -26,6 +26,16 @@ cd grant-avery-com/
 npm install
 ```
 
+### Get the [dotenv](https://www.npmjs.com/package/dotenv) `.env` config file from a fellow developer
+
+The file should include the keys for Airtable's API and Google's Recaptcha.
+
+Example:
+```
+GATSBY_SITE_RECAPTCHA_KEY=ENTER_YOUR_KEY_HERE
+GATSBY_AIRTABLE_KEY=ENTER_YOUR_KEY_HERE
+```
+
 ### Start development server
 
 ```sh

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Grant Avery',
@@ -23,7 +25,7 @@ module.exports = {
       //https://www.gatsbyjs.com/plugins/gatsby-source-airtable/
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: `keynOaENhqdq0X8Ng`,
+        apiKey: `${process.env.GATSBY_AIRTABLE_KEY}`,
         tables: [
           {
             baseId: `appeMzFyierjx6toV`,
