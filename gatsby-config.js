@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Grant Avery',
@@ -19,6 +21,27 @@ module.exports = {
     ]
   },
   plugins: [
+    {
+      //https://www.gatsbyjs.com/plugins/gatsby-source-airtable/
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `${process.env.GATSBY_AIRTABLE_KEY}`,
+        tables: [
+          {
+            baseId: `appeMzFyierjx6toV`,
+            tableName: `Content`,
+            tableView: `Grid view`,
+            queryName: ``,
+            mapping: { contentBody: `text/markdown` },
+          },
+          // We can add other bases/tables here, too!
+          //{
+            //baseId: `AIRTABLE_BASE_ID`,
+            //tableName: `Sides`
+          //}
+        ]
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,6 +50,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',

@@ -4,8 +4,6 @@ import SEO from '../components/seo';
 import Recaptcha from 'react-google-recaptcha';
 import { navigate } from 'gatsby-link';
 
-const RECAPTCHA_KEY = '6LfLXfcUAAAAAMlZr_sR8HfmsM7EhUfJGO8U0Swd';
-
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -99,7 +97,7 @@ export default class ContactPage extends React.Component {
             <Recaptcha
               className='field'
               ref='recaptcha'
-              sitekey={RECAPTCHA_KEY}
+              sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
               onChange={this.handleRecaptcha}
             />
             <div className='actions'>
