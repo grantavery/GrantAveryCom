@@ -5,32 +5,29 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query IndexPageQuery {
-      blogs: allAirtable(
-        filter: { table: { eq: "Content" }, data: {contentName: {eq: "HomePage-Body"}}}, limit: 1
-          ) {
+    query HomePageQuery {
+      allContentfulPage(filter: {title: {eq: "Home"}}, limit: 1) {
         nodes {
-          data {
-            contentName,
-            contentBody {
-              childMarkdownRemark {
-                html
-              }
+          title
+          body {
+            childMarkdownRemark {
+              html
             }
           }
-          recordId
         }
       }
     }
   `);
 
+  const node = data.allContentfulPage.nodes[0];
+
   return (
     <Layout>
-      <SEO title='Home' />
-      <h1>Home</h1>
+      <SEO title={node.title} />
+      <h1>{node.title}</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.blogs.nodes[0].data.contentBody.childMarkdownRemark.html,
+          __html: node.body.childMarkdownRemark.html,
         }}
       />
     </Layout>

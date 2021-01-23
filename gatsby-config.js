@@ -22,25 +22,11 @@ module.exports = {
   },
   plugins: [
     {
-      //https://www.gatsbyjs.com/plugins/gatsby-source-airtable/
-      resolve: `gatsby-source-airtable`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiKey: `${process.env.GATSBY_AIRTABLE_KEY}`,
-        tables: [
-          {
-            baseId: `appeMzFyierjx6toV`,
-            tableName: `Content`,
-            tableView: `Grid view`,
-            queryName: ``,
-            mapping: { contentBody: `text/markdown` },
-          },
-          // We can add other bases/tables here, too!
-          //{
-            //baseId: `AIRTABLE_BASE_ID`,
-            //tableName: `Sides`
-          //}
-        ]
-      }
+        spaceId: `${process.env.GATSBY_CONTENTFUL_SPACE_ID}`,
+        accessToken: `${process.env.GATSBY_CONTENTFUL_DELIVERY_TOKEN}`,
+      },
     },
     'gatsby-plugin-react-helmet',
     {

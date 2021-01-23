@@ -9,35 +9,30 @@ import { useStaticQuery, graphql } from 'gatsby';
 const LinksPage = () => {
   const data = useStaticQuery(graphql`
     query LinksPageQuery {
-      blogs: allAirtable(
-        filter: {data: {contentName: {eq: "LinksPage-Body"}}}
-          ) {
+      allContentfulPage(filter: {title: {eq: "Links"}}, limit: 1) {
         nodes {
-          data {
-            contentName,
-            contentBody {
-              childMarkdownRemark {
-                html,
-                rawMarkdownBody
-              }
+          title
+          body {
+            childMarkdownRemark {
+              html
             }
           }
-          recordId
         }
       }
     }
   `);
 
+  const node = data.allContentfulPage.nodes[0];
+
   return (
     <Layout>
-      <SEO title='Links' />
-      <h1>Links</h1>
+      <SEO title={node.title} />
+      <h1>{node.title}</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.blogs.nodes[0].data.contentBody.childMarkdownRemark.rawMarkdownBody,
+          __html: node.body.childMarkdownRemark.html,
         }}
       />
-      <br/>
 
       <div className='links-container'>
         <LinkBox linkUrl='https://github.com/grantavery/' title='GitHub'
