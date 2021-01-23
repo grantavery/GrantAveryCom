@@ -4,7 +4,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/12aa2b03-e92c-4c42-a5fd-038f8d1dae58/deploy-status)](https://app.netlify.com/sites/grant-avery-com/deploys)
 
-You can view this site at [grantavery.com](https://www.grantavery.com/). It uses [GatsbyJS](https://www.gatsbyjs.org/) (which is built on top of React) to bundle the pages and content, and then on push to GitHub, [netlify](https://www.netlify.com/) publishes it to update the live site.
+You can view this site at [grantavery.com](https://www.grantavery.com/). It uses [GatsbyJS](https://www.gatsbyjs.org/) (which is built on top of React) to bundle the pages and content (some of which is pulled from my [Contentful](https://www.contentful.com/) CMS), and then on push to GitHub, [netlify](https://www.netlify.com/) publishes it to update the live site.
 
 ## Local Dev
 
@@ -28,12 +28,14 @@ npm install
 
 ### Get the [dotenv](https://www.npmjs.com/package/dotenv) `.env` config file from a fellow developer
 
-The file should include the keys for Airtable's API and Google's Recaptcha.
+The file should include the keys for Contentful's CMS API and Google's Recaptcha.
 
 Example:
 ```
 GATSBY_SITE_RECAPTCHA_KEY=ENTER_YOUR_KEY_HERE
-GATSBY_AIRTABLE_KEY=ENTER_YOUR_KEY_HERE
+GATSBY_CONTENTFUL_SPACE_ID=ENTER_YOUR_ID_HERE
+GATSBY_CONTENTFUL_DELIVERY_TOKEN=ENTER_YOUR_TOKEN_HERE
+GATSBY_PI_API_URL=ENTER_YOUR_URL_HERE
 ```
 
 ### Start development server
@@ -62,7 +64,7 @@ gatsby serve
 
 Accessible at {baseUrl}/pi
 
-Uses [my Pi API repo](https://github.com/grantavery/pi-api) (deployed to https://pi-api-bfii5.ondigitalocean.app) as a NodeJS Express API to retrieve Pi values from Google's more cumbersome [Pi API](https://pi.delivery/).
+Uses [my Pi API repo](https://github.com/grantavery/pi-api) as a NodeJS Express API to retrieve Pi values from Google's more cumbersome [Pi API](https://pi.delivery/).
 
 ## Gatsby Info (taken from their starter project README)
 

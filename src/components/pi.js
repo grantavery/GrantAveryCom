@@ -14,7 +14,7 @@ class PiComponent extends React.Component {
   componentDidMount() {
     this.setState({ isLoaded: false});
 
-    axios.get("https://pi-api-bfii5.ondigitalocean.app/pi", {
+    axios.get(process.env.GATSBY_PI_API_URL, {
       params: {
         numberOfDigits: 3142
       }
