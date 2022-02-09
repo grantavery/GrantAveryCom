@@ -18,7 +18,7 @@ module.exports = {
         name: 'Contact',
         link: '/contact'
       },
-    ]
+    ],
   },
   plugins: [
     {
@@ -44,10 +44,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'grant-avery-com',
-        short_name: 'starter',
+        short_name: 'grantaverycom',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#c75407',
+        theme_color: '#c75407',
         display: 'minimal-ui',
         icon: 'src/images/xkcd-question-man.png', // This path is relative to the root of the site.
       },
