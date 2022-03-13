@@ -9,21 +9,22 @@ function encode(data) {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 }
+
+const recaptchaRef = React.createRef()
+
 export default class ContactPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', message: '', gotRecaptcha: false };
+    this.state = { name: '', email: '', message: '' };
   }
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  handleRecaptcha = value => {
-    this.setState({ 'g-recaptcha-response': value });
-    this.setState({ gotRecaptcha: true });
-  };
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
+
+    const recaptchaCurrent = recaptchaRef.current;
 
     if (this.state.name === '' || this.state.email === '' || this.state.message === '')
     {
@@ -32,7 +33,7 @@ export default class ContactPage extends React.Component {
     else if (!this.validateEmail(this.state.email)) {
       alert('Error: Please make sure the provided email is in the correct format.');
     }
-    else if (this.state.gotRecaptcha === false) {
+    else if (!recaptchaCurrent.getValue()) {
       alert('Error: Please make sure you\'ve clicked the reCAPTCHA checkbox.');
     }
     else {
@@ -41,6 +42,7 @@ export default class ContactPage extends React.Component {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': form.getAttribute('name'),
+          'g-recaptcha-response': recaptchaCurrent.getValue(),
           ...this.state
         })
       })
@@ -96,9 +98,8 @@ export default class ContactPage extends React.Component {
             </div>
             <Recaptcha
               className='field'
-              ref='recaptcha'
+              ref={recaptchaRef}
               sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
-              onChange={this.handleRecaptcha}
             />
             <div className='actions'>
               <button type='submit' value='Send' className='page-btn'>Send</button>
