@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Recaptcha from 'react-google-recaptcha';
+// import Recaptcha from 'react-google-recaptcha';
 import { navigate } from 'gatsby-link';
 
 function encode(data) {
@@ -10,7 +10,7 @@ function encode(data) {
     .join('&');
 }
 
-const recaptchaRef = React.createRef()
+// const recaptchaRef = React.createRef()
 
 export default class ContactPage extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export default class ContactPage extends React.Component {
     e.preventDefault();
     const form = e.target;
 
-    const recaptchaCurrent = recaptchaRef.current;
+    // const recaptchaCurrent = recaptchaRef.current;
 
     if (this.state.name === '' || this.state.email === '' || this.state.message === '')
     {
@@ -33,16 +33,16 @@ export default class ContactPage extends React.Component {
     else if (!this.validateEmail(this.state.email)) {
       alert('Error: Please make sure the provided email is in the correct format.');
     }
-    else if (!recaptchaCurrent.getValue()) {
-      alert('Error: Please make sure you\'ve clicked the reCAPTCHA checkbox.');
-    }
+    // else if (!recaptchaCurrent.getValue()) {
+    //   alert('Error: Please make sure you\'ve clicked the reCAPTCHA checkbox.');
+    // }
     else {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': form.getAttribute('name'),
-          'g-recaptcha-response': recaptchaCurrent.getValue(),
+          // 'g-recaptcha-response': recaptchaCurrent.getValue(),
           ...this.state
         })
       })
@@ -70,7 +70,7 @@ export default class ContactPage extends React.Component {
             action='/thanks/'
             data-netlify='true'
             data-netlify-honeypot='bot-field'
-            data-netlify-recaptcha='true'
+            // data-netlify-recaptcha='true'
             onSubmit={this.handleSubmit}>
             <noscript>
               <p>This form won’t work with Javascript disabled</p>
@@ -96,11 +96,11 @@ export default class ContactPage extends React.Component {
                 <textarea name='message' id='message' rows='6' value={message} onChange={this.handleChange} required />
               </label>
             </div>
-            <Recaptcha
+            {/* <Recaptcha
               className='field'
               ref={recaptchaRef}
               sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
-            />
+            /> */}
             <div className='actions'>
               <button type='submit' value='Send' className='page-btn'>Send</button>
             </div>
