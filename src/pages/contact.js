@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 // import Recaptcha from 'react-google-recaptcha';
 import { navigate } from 'gatsby-link';
 
@@ -61,7 +61,7 @@ export default class ContactPage extends React.Component {
     return (
       <Layout>
         <div>
-          <SEO title='Contact' />
+          <Seo title='Contact' />
           <h1>Contact</h1>
           <form
             className='contact-form'
@@ -96,6 +96,7 @@ export default class ContactPage extends React.Component {
                 <textarea name='message' id='message' rows='6' value={message} onChange={this.handleChange} required />
               </label>
             </div>
+            {/* TODO re-add this when I can figure out why it stopped working */}
             {/* <Recaptcha
               className='field'
               ref={recaptchaRef}

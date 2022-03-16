@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import LinkBox from '../components/link-box';
 import githubLogo from '../images/linkedin-logo.png';
 import linkedinLogo from '../images/github-logo.png';
@@ -26,7 +26,7 @@ const LinksPage = () => {
 
   return (
     <Layout>
-      <SEO title={node.title} />
+      <Seo title={node.title} />
       <h1>{node.title}</h1>
       <div
         dangerouslySetInnerHTML={{
