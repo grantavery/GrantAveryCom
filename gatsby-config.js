@@ -21,6 +21,7 @@ module.exports = {
     ],
   },
   plugins: [
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-source-contentful`,
       options: {

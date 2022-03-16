@@ -21,9 +21,12 @@ class PiComponent extends React.Component {
     })
     .then(response => {
       console.log("Response: " + JSON.stringify(response.data))
+
+      const formattedDigits = response.data.slice(0, 1) + "." + response.data.slice(1, response.data.length)
+      console.log(formattedDigits);
       this.setState({
         isLoaded: true,
-        content: response.data
+        content: formattedDigits
       });
     })
     .catch(err => {

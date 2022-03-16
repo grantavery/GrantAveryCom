@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Recaptcha from 'react-google-recaptcha';
+import Seo from '../components/seo';
+// import Recaptcha from 'react-google-recaptcha';
 import { navigate } from 'gatsby-link';
 
 function encode(data) {
@@ -9,21 +9,22 @@ function encode(data) {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 }
+
+// const recaptchaRef = React.createRef()
+
 export default class ContactPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', message: '', gotRecaptcha: false };
+    this.state = { name: '', email: '', message: '' };
   }
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  handleRecaptcha = value => {
-    this.setState({ 'g-recaptcha-response': value });
-    this.setState({ gotRecaptcha: true });
-  };
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
+
+    // const recaptchaCurrent = recaptchaRef.current;
 
     if (this.state.name === '' || this.state.email === '' || this.state.message === '')
     {
@@ -32,15 +33,16 @@ export default class ContactPage extends React.Component {
     else if (!this.validateEmail(this.state.email)) {
       alert('Error: Please make sure the provided email is in the correct format.');
     }
-    else if (this.state.gotRecaptcha === false) {
-      alert('Error: Please make sure you\'ve clicked the reCAPTCHA checkbox.');
-    }
+    // else if (!recaptchaCurrent.getValue()) {
+    //   alert('Error: Please make sure you\'ve clicked the reCAPTCHA checkbox.');
+    // }
     else {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': form.getAttribute('name'),
+          // 'g-recaptcha-response': recaptchaCurrent.getValue(),
           ...this.state
         })
       })
@@ -59,7 +61,7 @@ export default class ContactPage extends React.Component {
     return (
       <Layout>
         <div>
-          <SEO title='Contact' />
+          <Seo title='Contact' />
           <h1>Contact</h1>
           <form
             className='contact-form'
@@ -68,7 +70,7 @@ export default class ContactPage extends React.Component {
             action='/thanks/'
             data-netlify='true'
             data-netlify-honeypot='bot-field'
-            data-netlify-recaptcha='true'
+            // data-netlify-recaptcha='true'
             onSubmit={this.handleSubmit}>
             <noscript>
               <p>This form won’t work with Javascript disabled</p>
@@ -94,12 +96,12 @@ export default class ContactPage extends React.Component {
                 <textarea name='message' id='message' rows='6' value={message} onChange={this.handleChange} required />
               </label>
             </div>
-            <Recaptcha
+            {/* TODO re-add this when I can figure out why it stopped working */}
+            {/* <Recaptcha
               className='field'
-              ref='recaptcha'
+              ref={recaptchaRef}
               sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
-              onChange={this.handleRecaptcha}
-            />
+            /> */}
             <div className='actions'>
               <button type='submit' value='Send' className='page-btn'>Send</button>
             </div>
